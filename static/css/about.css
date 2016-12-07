@@ -1,0 +1,54 @@
+.about {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px 0;
+}
+
+.head {
+    border-bottom: 1px solid rgb(167, 30, 43)
+}
+
+.progress-bar {
+    background: rgb(167, 30, 43);
+}
+
+.about h4 {
+    margin-top: 25px;
+}
+
+.about .pull-left p:nth-of-type(1) {
+    margin-top: 20px;
+}
+
+.about .row>div {
+    margin-top: 20px;
+}
+
+@media screen and (max-width:768px) {
+    .left {
+        float: none;
+    }
+    .progress {
+        height: 4px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    .left {
+        float: none;
+    }
+    .progress {
+        height: 20px;
+    }
+}
+
+.introduce {
+    background: white;
+    color: rgb(111, 111, 111);
+    font-size: 0.8rem;
+}
+
+.ico a {
+    color: rgb(111, 111, 111);
+    margin-left: 10px;
+}

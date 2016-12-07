@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{name}}</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" style="text/css" href="static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="static/css/about.css">
+    <link rel="stylesheet" href="static/css/around.css">
+    <link rel="stylesheet" href="static/css/tourist.css">
+    <link rel="stylesheet" href="static/css/travel.css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+            <script src="js/html5shiv.min.js"></script>
+            <script src="js/respond.min.js"></script>
+        <![endif]-->
+</head>
+
+<body>
+    <!--nav start-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed text-center" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                 </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right hidden-lg">
+                    <li><a href="/"><i class="fa fa-home "></i> 主页</a></li>
+                    <li><a href="/about"><i class="fa fa-user "></i> 关于我们</a></li>
+                    <li><a href="/tourist"><i class="fa fa-suitcase "></i> 我们的创作室</a></li>
+                    <li><a href="/around"><i class="fa fa-cog "></i> 我们的服务</a></li>
+                    <li><a href="/travel"><i class="fa fa-globe "></i> 联系我们</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right hidden-md hidden-sm hidden-xs">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> <span> -- Language Selection --</span> <i class="fa fa-angle-down pull-right"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Chinese</a></li>
+                            <li><a href="#">English</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav hidden-md hidden-sm hidden-xs slide">
+                    <li><a href="/"><i class="fa fa-home "></i></a></li>
+                    <li><a href="/about"><i class="fa fa-user "></i></a></li>
+                    <li><a href="/tourist"><i class="fa fa-suitcase "></i></a></li>
+                    <li><a href="/around"><i class="fa fa-cog "></i></a></li>
+                    <li><a href="/travel"><i class="fa fa-globe "></i></a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <!--nav end-->
+
+    <!--logo start-->
+    <div class="container logo">
+        <div class="text-center">
+            <a href="#1"><img src="static/images/templatemo_logo.png" alt=""></a>
+        </div>
+    </div>
+    <!--logo end-->
+
+    {% block main %} {% endblock %}
+
+
+    <!--footer start-->
+    <div class="container foot">
+        <p class="pull-left hidden-md hidden-sm hidden-xs">Copy @2084 Compay Name-Free HTML5 Template Collect from 网页模板</p>
+        <p class="pull-right">
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-linkedin"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-feed"></i>
+        </p>
+    </div>
+
+    <!--footer end-->
+
+    <!-- jQuery -->
+    <script src="static/js/jquery-3.1.1.min.js "></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="static/js/bootstrap.js "></script>
+    <script>
+        $(() => {
+            $(window).resize(() => {
+                if ($(window).innerWidth() < 992) {
+                    $('.pull-right').children().eq(0).removeClass().addClass('fa fa-qq');
+                    $('.pull-right').children().eq(1).removeClass().addClass('fa fa-weixin');
+                    $('.pull-right').children().eq(2).removeClass().addClass('fa fa-weibo');
+                    $('.pull-right').children().eq(3).removeClass().addClass('fa fa-tencent-weibo');
+                    $('.pull-right').children().eq(4).removeClass().addClass('fa fa-tencent-weibo');
+                } else {
+                    $('.pull-right').children().eq(0).removeClass().addClass('fa fa-twitter');
+                    $('.pull-right').children().eq(1).removeClass().addClass('fa fa-facebook');
+                    $('.pull-right').children().eq(2).removeClass().addClass('fa fa-linkedin');
+                    $('.pull-right').children().eq(3).removeClass().addClass('fa fa fa-twitter');
+                    $('.pull-right').children().eq(4).removeClass().addClass('fa fa-feed');
+                }
+            });
+        });
+
+
+        //language
+        $('.dropdown-menu a').click(function() {
+            console.log($(this).text());
+            $('.dropdown-toggle span').text($(this).text());
+        });
+
+        //modal
+        $(() => {
+            let n;
+            $('.images').click(function() {
+                console.log($(this).index());
+                n = $(this).index();
+                $('.modal li').css('display', 'none');
+                $('.modal li').eq(n).css('display', 'block');
+            });
+            $('#left').click(function() {
+                n--;
+                if (n <= -1) {
+                    n = 8;
+                }
+                $('.modal li').css('display', 'none');
+                $('.modal li').eq(n).css('display', 'block');
+            });
+            $('#right').click(function() {
+                n++;
+                if (n >= 8) {
+                    n = -1;
+                }
+                $('.modal li').css('display', 'none');
+                $('.modal li').eq(n).css('display', 'block');
+            });
+        });
+    </script>
+</body>
+
+</html>

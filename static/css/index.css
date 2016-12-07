@@ -1,0 +1,223 @@
+body {
+    background: url(../images/bg-homepage.jpg);
+    background-size: cover;
+}
+
+.navbar {
+    background: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.slide {
+    position: absolute;
+    top: 90px;
+    left: 10%;
+}
+
+.slide li {
+    display: block;
+    margin-top: 10px;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide li a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid rgb(112, 112, 112);
+    color: rgb(112, 112, 112);
+}
+
+.slide li a i {
+    font-size: 20px;
+}
+
+.dropdown-menu {
+    width: 100%;
+    background: black;
+}
+
+.dropdown .dropdown-menu a {
+    color: white;
+}
+
+.dropdown {
+    background: black;
+    margin-top: 20px;
+    width: 190px;
+    height: 30px;
+}
+
+.nav .dropdown .dropdown-toggle {
+    background: black;
+    color: white;
+    display: block;
+    padding: 0;
+    height: 30px;
+    line-height: 30px;
+}
+
+.nav .dropdown .dropdown-toggle:hover {
+    color: white;
+}
+
+.fa-angle-down {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: rgb(166, 30, 43);
+    color: white;
+    margin-left: 40px;
+}
+
+@media screen and (max-width:760px) {
+    .navbar-header {
+        display: flex;
+        justify-content: center;
+        background: rgb(167, 30, 43);
+        border: none;
+    }
+    .navbar-default .navbar-collapse {
+        border-color: transparent;
+    }
+    .logo {
+        margin-top: 50px;
+    }
+    .foot .pull-right i {
+        margin-left: 20px;
+    }
+    .navbar-nav li {
+        border-bottom: 1px solid rgb(119, 119, 119);
+    }
+    .navbar-default .navbar-header .navbar-toggle {
+        border: 0;
+    }
+    .navbar-default .navbar-header .navbar-toggle span {
+        background: blue;
+    }
+    .navbar-nav {
+        background: black;
+        margin-top: -4px;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:992px) {
+    .navbar {
+        background: black;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .logo {
+        margin-top: 100px;
+    }
+}
+
+.images {
+    margin-top: 30px;
+}
+
+.images a {
+    display: block;
+    width: 70%;
+    border: 3px solid rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.images a i {
+    padding: 6%;
+    position: absolute;
+    z-index: 10;
+    color: white;
+    background: rgb(167, 30, 43);
+    top: 40%;
+    left: 40%;
+    display: none;
+}
+
+.images a:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+}
+
+.images a:hover:after {
+    display: block;
+}
+
+.images a:hover i {
+    display: block;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.foot {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.pull-right i {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 4px;
+}
+
+.modal-body {
+    display: flex;
+    justify-content: center;
+}
+
+.modal .modal-content {
+    position: absolute;
+    margin-top: 10rem;
+}
+
+#left {
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: white;
+    border-radius: 50%;
+    font-size: 3rem;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+}
+
+#right {
+    display: block;
+    font-size: 3rem;
+    width: 40px;
+    height: 40px;
+    color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 20%;
+}

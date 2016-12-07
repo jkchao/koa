@@ -1,0 +1,55 @@
+.tourist {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px 0;
+}
+
+.head {
+    border-bottom: 1px solid rgb(167, 30, 43)
+}
+
+.introduce {
+    background: white;
+    color: rgb(111, 111, 111);
+    font-size: 0.8rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.title .search input {
+    background: black;
+    color: white;
+    border: none;
+    outline: none;
+    display: inline-block;
+    height: 28px;
+    width: 120px;
+}
+
+.search a {
+    display: inline-block;
+    margin-left: -4px;
+    margin-top: -2px;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    background: rgb(167, 30, 43);
+    color: white;
+}
+
+.content {
+    margin-top: 20px;
+    padding-left: 0;
+}
+
+@media screen and (max-width:760px) {
+    .tourist-1 {
+        text-align: center;
+    }
+}

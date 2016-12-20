@@ -1,4 +1,13 @@
  {
+     "name": "node",
+     "version": "1.0.0",
+     "description": "a collection of simple demos of node",
+     "main": "index.js",
+     "keywords": [
+         "build",
+         "demo",
+         "node"
+     ],
      "dependencies": {
          "babel-core": "6.13.2",
          "babel-polyfill": "6.13.0",

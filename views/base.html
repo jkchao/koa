@@ -99,55 +99,41 @@
     <script src="static/js/bootstrap.js "></script>
     <script>
         $(() => {
-            $(window).resize(() => {
-                if ($(window).innerWidth() < 992) {
-                    $('.pull-right').children().eq(0).removeClass().addClass('fa fa-qq');
-                    $('.pull-right').children().eq(1).removeClass().addClass('fa fa-weixin');
-                    $('.pull-right').children().eq(2).removeClass().addClass('fa fa-weibo');
-                    $('.pull-right').children().eq(3).removeClass().addClass('fa fa-tencent-weibo');
-                    $('.pull-right').children().eq(4).removeClass().addClass('fa fa-tencent-weibo');
-                } else {
-                    $('.pull-right').children().eq(0).removeClass().addClass('fa fa-twitter');
-                    $('.pull-right').children().eq(1).removeClass().addClass('fa fa-facebook');
-                    $('.pull-right').children().eq(2).removeClass().addClass('fa fa-linkedin');
-                    $('.pull-right').children().eq(3).removeClass().addClass('fa fa fa-twitter');
-                    $('.pull-right').children().eq(4).removeClass().addClass('fa fa-feed');
-                }
-            });
+        $(window).resize(() => {
+            if ($(window).innerWidth() <
+                992) {
+                $('.pull-right').children().eq(0).removeClass().addClass('fa fa-qq');
+                $('.pull-right').children().eq(1).removeClass().addClass('fa fa-weixin');
+                $('.pull-right').children().eq(2).removeClass().addClass('fa fa-weibo');
+                $('.pull-right').children().eq(3).removeClass().addClass(
+                    'fa fa-tencent-weibo');
+                $('.pull-right').children().eq(4).removeClass().addClass('fa fa-tencent-weibo');
+            } else {
+                $('.pull-right').children().eq(0).removeClass().addClass('fa fa-twitter');
+                $('.pull-right').children().eq(1).removeClass().addClass(
+                    'fa fa-facebook');
+                $('.pull-right').children().eq(2).removeClass().addClass('fa fa-linkedin');
+                $('.pull-right').children().eq(3).removeClass().addClass('fa fa fa-twitter');
+                $('.pull-right').children().eq(4).removeClass().addClass('fa fa-feed');
+            }
         });
-
-
-        //language
-        $('.dropdown-menu a').click(function() {
-            console.log($(this).text());
-            $('.dropdown-toggle span').text($(this).text());
         });
-
-        //modal
-        $(() => {
-            let n;
-            $('.images').click(function() {
-                console.log($(this).index());
-                n = $(this).index();
-                $('.modal li').css('display', 'none');
-                $('.modal li').eq(n).css('display', 'block');
-            });
-            $('#left').click(function() {
-                n--;
-                if (n <= -1) {
-                    n = 8;
-                }
-                $('.modal li').css('display', 'none');
-                $('.modal li').eq(n).css('display', 'block');
-            });
-            $('#right').click(function() {
-                n++;
-                if (n >= 8) {
-                    n = -1;
-                }
-                $('.modal li').css('display', 'none');
-                $('.modal li').eq(n).css('display', 'block');
-            });
+        //language $( '.dropdown-menu a').click(function() { console.log($(this).text()); $( '.dropdown-toggle span').text($(this).text()); }); //modal $(()=> { let n; $('.images').click(function() { console.log($(this).index()); n = $(this).index(); $('.modal li').css('display', 'none'); $('.modal li').eq(n).css('display', 'block'); }); $('#left').click(function() { n--; if (n
+        <=
+        -1) {
+            n = 8;
+        }
+        $('.modal li').css('display', 'none');
+        $('.modal li').eq(n).css('display', 'block');
+        });
+        $('#right').click(function() {
+        n++;
+        if (n >= 8) {
+            n = -1;
+        }
+        $('.modal li').css('display', 'none');
+        $('.modal li').eq(n).css('display', 'block');
+        });
         });
     </script>
 </body>

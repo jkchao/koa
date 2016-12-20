@@ -8,6 +8,7 @@
          "demo",
          "node"
      ],
+    "author": "jkchao <419027396@qq.com>",
      "dependencies": {
          "babel-core": "6.13.2",
          "babel-polyfill": "6.13.0",
